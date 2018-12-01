@@ -6,7 +6,7 @@ using System.Web;
 
 namespace TPWEB_Residual.Models
 {
-    public enum Materiais
+    public enum TiposMateriais
     {
         [Description("Equipamentos Desactivados")]
         EquipamentosDesactivados = 1,

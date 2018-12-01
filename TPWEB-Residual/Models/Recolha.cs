@@ -14,8 +14,8 @@ namespace TPWEB_Residual.Models
         public int Quantidade { get; set; }
         public string Localizacao { get; set; }
         public string Morada { get; set; }
-        public Estados Estado { get; set; }
-        public Materiais Material { get; set; }
+        public TiposEstados Estado { get; set; }
+        public TiposMateriais Material { get; set; }
         public DateTime DataRegisto { get; set; }
         public DateTime DataRecolha { get; set; }
 

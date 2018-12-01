@@ -20,5 +20,8 @@ namespace TPWEB_Residual.Models
         public string Localidade { get; set; }
         public string CodigoPostal { get; set; }
         public int Telefone { get; set; }
+        public TiposUtilizador TipoUtilizador { get; set; }
+        public DateTime DataRegisto { get; set; } = DateTime.Now;
+
     }
 }

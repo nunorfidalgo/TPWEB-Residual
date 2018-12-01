@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace TPWEB_Residual.Models
 {
+    [Table("Veiculos")]
     public class Veiculo
     {
         public string Matricula { get; set; }
@@ -12,13 +15,7 @@ namespace TPWEB_Residual.Models
         public string Modelo { get; set; }
         public string Cor { get; set; }
         public decimal Capacidade { get; set; }
-        public enum Tipo {
-            Carrinha,
-            Camião,
-            Carro,
-            Cisterna,
-            Outro
-        }
+        public TiposVeiculo TipoVeiculo { get; set; }
         public DateTime DataCompra { get; set; } = DateTime.Now;
     }
 }
