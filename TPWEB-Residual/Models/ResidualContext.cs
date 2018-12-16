@@ -6,16 +6,16 @@ using System.Web;
 
 namespace TPWEB_Residual.Models
 {
-    public class ResidualContext : DbContext
+    public class ResidualContext : ApplicationDbContext //DbContext
     {
-        public ResidualContext() : base("name=DefaultConnection")
+        public ResidualContext() // : base("name=DefaultConnection")
         {
 
         }
 
-        public DbSet<Utilizador> Utilizadores { get; set; }
-        public DbSet<Veiculo> Veiculos { get; set; }
         public DbSet<Recolha> Recolhas { get; set; }
+        public DbSet<Utilizador> Utilizdores { get; set; }
+        public DbSet<Veiculo> Veiculos { get; set; }
 
     }
 }

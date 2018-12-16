@@ -9,7 +9,7 @@ namespace TPWEB_Residual.Models
     [Table("Recolhas")]
     public class Recolha
     {
-        public int Id { get; set; }
+        public int RecolhaId { get; set; }
         public int TipoResiduo { get; set; }
         public int Quantidade { get; set; }
         public string Localizacao { get; set; }

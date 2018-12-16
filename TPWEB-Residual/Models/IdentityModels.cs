@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -16,6 +17,11 @@ namespace TPWEB_Residual.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        [ForeignKey("Utilizador")]
+        public int UtilizadorId { get; set; }
+        public virtual Utilizador Utilizador { get; set; } //virtual
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -29,5 +35,10 @@ namespace TPWEB_Residual.Models
         {
             return new ApplicationDbContext();
         }
+
+        //public DbSet<Recolha> Recolhas { get; set; }
+        //public DbSet<Utilizador> Utilizadores { get; set; }
+        //public DbSet<Veiculo> Veiculos { get; set; }
+
     }
 }
