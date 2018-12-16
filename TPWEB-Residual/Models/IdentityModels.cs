@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -18,10 +20,30 @@ namespace TPWEB_Residual.Models
             return userIdentity;
         }
 
-        [ForeignKey("Utilizador")]
-        public int UtilizadorId { get; set; }
-        public virtual Utilizador Utilizador { get; set; } //virtual
+        //public string lixo { get; set; }
+        //[ForeignKey("Utilizador")]
+        //public int UtilizadorIdFk { get; set; }
+        //public virtual Utilizador Utilizador { get; set; }
 
+        public string Nome { get; set; }
+        public string Apelido { get; set; }
+
+        [Display(Name = "Data de Nascimento")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public System.DateTime DataNascimento { get; set; }
+
+        public string BI_CC { get; set; }
+        public int NIF { get; set; }
+        public string Morada { get; set; }
+        public string Localidade { get; set; }
+        public string CodigoPostal { get; set; }
+
+        public TiposUtilizador TipoUtilizador { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime DataRegisto { get; set; } = DateTime.Now;
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

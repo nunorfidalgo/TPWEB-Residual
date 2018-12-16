@@ -19,8 +19,8 @@ namespace TPWEB_Residual.Models
         public DateTime DataRegisto { get; set; }
         public DateTime DataRecolha { get; set; }
 
-        public ICollection<Utilizador> Utilizador { get; set; }
-
+        //public ICollection<Utilizador> Utilizador { get; set; }
+        public ICollection<ApplicationUser> Utilizador { get; set; }
 
     }
 }
