@@ -9,7 +9,10 @@ namespace TPWEB_Residual.Models
     [Table("Utilizadores")]
     public class Utilizador
     {
-        public int Id { get; set; }
+        //[ForeignKey("Id")]
+        //public ApplicationUser Id { get; set; } //virtual
+
+        public int UtilizadorId { get; set; }
         public string Nome { get; set; }
         public string Apelido { get; set; }
         public string Email { get; set; }

@@ -201,6 +201,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ResidualContext.cs" />
     <Compile Include="Models\TiposEstados.cs" />
     <Compile Include="Models\TiposMateriais.cs" />
     <Compile Include="Models\Recolha.cs" />

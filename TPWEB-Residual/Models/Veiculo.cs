@@ -10,6 +10,7 @@ namespace TPWEB_Residual.Models
     [Table("Veiculos")]
     public class Veiculo
     {
+        public int VeiculoId { get; set; }
         public string Matricula { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }
