@@ -42,7 +42,10 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 - [ ] Uso de Extensions "Sessions";
 - [ ] Como fazer log?;
 - [ ] Criar os controladores e gerar as views com recurso ao "scaffolding";
+	- [ ] Definir vistas e controladores para operações específicas
+	- [ ] Criar vistas e controladores para operações específicas
 - [ ] Uso de Ajax no projeto;
 - [ ] Envio de mails
 - [ ] Facebook/Google/Twitter? ver-> App_Start\Startup.Auth.cs
+- [ ] Integração Gmaps para ver moradas
 - [ ] Embelezar o front end
