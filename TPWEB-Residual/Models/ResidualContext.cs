@@ -14,7 +14,7 @@ namespace TPWEB_Residual.Models
         }
 
         public DbSet<Recolha> Recolhas { get; set; }
-        public DbSet<Utilizador> Utilizdores { get; set; }
+        //public DbSet<Utilizador> Utilizdores { get; set; }
         public DbSet<Veiculo> Veiculos { get; set; }
 
     }

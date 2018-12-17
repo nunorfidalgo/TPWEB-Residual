@@ -18,5 +18,7 @@ namespace TPWEB_Residual.Models
         public decimal Capacidade { get; set; }
         public TiposVeiculo TipoVeiculo { get; set; }
         public DateTime DataCompra { get; set; } = DateTime.Now;
+
+        public ICollection<ApplicationUser> Utilizador { get; set; }
     }
 }
