@@ -20,9 +20,10 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 - [] exportar a bd para ficheiro sql
 
 ## Extras
-- [ ] OpenStreetMaps
+- [ ] OpenStreetMaps/GoogleMaps
 	- [ ] Pontos Electrão
 	- [ ] ecopilhas
+	- [ ] Pilhão
 - [ ] ersuc
 
 # Site
@@ -37,8 +38,9 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 * Admins
 
 ## Dúvidas
- - [ ] Criar uma class pessoas para os cidadoes/operadores/admins?
-
+ - [x] Criar uma class pessoas para os cidadoes/operadores/admins?
+	- [x] fazer uso da Roles para os tipos de utilizador;
+- [ ] É obrigatorio o uso de Extensions  mais expeficicamente "Sessions";
 
 ## Tarefas
 - [x] Criação inicial do projeto usando o GitHub;
@@ -55,7 +57,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 		- [x] Retiramos a relação de 1-1 com o utilizador devido a não conseguirmos definir a Foreignkey com o Id do AplicationUser;
 	- [x] Alterar o nome da BD no "connectionString" em web.config;
 - [x] Correção das relações das tabelas criadas;
-	- [ ] Validações de dados;
+	- [x] Validações de dados;
 - [ ] Activar migrações: 
 	- [ ] Tools->NuGet Package Manager->Package Manager Console:
 	- [ ] Enable-Migrations
@@ -66,7 +68,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [ ]  Procurar por "IdentityUserRoleManagement" e instalar
 - [ ] startup.cs: Inserir dados SQL;
 	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76;
-- [ ] Validações de dados nos formularios!!!!!!!!!!!!!!!!;
+- [ ] Verificar validações de dados nos formularios (importante);
 - [ ] Uso de Extensions "Sessions";
 - [ ] Criar os controladores e gerar as views com recurso ao "scaffolding";
 	- [ ] Definir vistas e controladores para operações específicas;
