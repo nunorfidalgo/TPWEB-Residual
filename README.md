@@ -17,7 +17,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 
 ## NOTAS:
 - [ ] Como fazer log?;
-- [] exportar a bd para ficheiro sql
+- [ ] exportar a bd para ficheiro sql
 
 ## Extras
 - [ ] OpenStreetMaps/GoogleMaps
@@ -58,11 +58,17 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [x] Alterar o nome da BD no "connectionString" em web.config;
 - [x] Correção das relações das tabelas criadas;
 	- [x] Validações de dados;
-- [ ] Activar migrações: 
-	- [ ] Tools->NuGet Package Manager->Package Manager Console:
-	- [ ] Enable-Migrations
-	- [ ] Add-Migation <nome da migração>
-	- [ ] Update-Database
+- [x] Activar migrações: 
+	- [x] Tools->NuGet Package Manager->Package Manager Console;
+	- [x] Enable-Migrations -> Enable-Migrations -ContextTypeName TPWEB_Residual.Models.ResidualContext;
+	- [x] Add-Migration MigracaoInicial;
+	- [x] Update-Database (Não esqueçer de selecionar a opção de "Show all files" no "Solution Explorer" e se abrir o "Server Explorer" em View->Other Windows);
+- [x] Registo e login feito;
+	- [ ] Em falta, operadores e admins;
+- [x] Criar os controladores e gerar as views com recurso ao "scaffolding";
+	- [x] Gerei as Recolhas;
+	- [ ] Definir vistas e controladores para operações específicas;
+	- [ ] Criar vistas e controladores para operações específicas;
 - [ ] Instalar e configurar o "IdentityUserRoleManagement";
 	- [ ] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
 	- [ ]  Procurar por "IdentityUserRoleManagement" e instalar
@@ -70,9 +76,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76;
 - [ ] Verificar validações de dados nos formularios (importante);
 - [ ] Uso de Extensions "Sessions";
-- [ ] Criar os controladores e gerar as views com recurso ao "scaffolding";
-	- [ ] Definir vistas e controladores para operações específicas;
-	- [ ] Criar vistas e controladores para operações específicas;
+
 - [ ] Uso de Ajax no projeto;
 - [ ] Envio de mails;
 - [ ] Facebook/Google/Twitter? ver-> App_Start\Startup.Auth.cs;

@@ -34,8 +34,8 @@ namespace TPWEB_Residual.Models
         public string Localizacao { get; set; }
 
         [Display(Name = "Data recolha")]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{HH:mm:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
         [Required(ErrorMessage = "Data recolha obrigatório!")]
         public DateTime DataRecolha { get; set; }
 
@@ -46,8 +46,8 @@ namespace TPWEB_Residual.Models
         public string Descricao { get; set; }
 
         [Display(Name = "Data registo")]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{HH:mm:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
         public DateTime DataRegisto { get; set; }
 
         public TiposMateriais TipoResiduo { get; set; }
