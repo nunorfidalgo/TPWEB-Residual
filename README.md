@@ -16,8 +16,8 @@ Para os últimos tipos de residuos pretende-se criar um serviço de recolha dire
 recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a disponibilidade, de meios adequados de transporte.
 
 ## NOTAS:
-- [ ] Como fazer log?;
-- [ ] exportar a bd para ficheiro sql
+- [ ] Como fazer log? "logs class asp.net mvc" ("logger", "nlog") catalogando erros e gerando logs.
+- [] exportar a bd para ficheiro sql
 
 ## Extras
 - [ ] OpenStreetMaps/GoogleMaps
@@ -40,7 +40,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 ## Dúvidas
  - [x] Criar uma class pessoas para os cidadoes/operadores/admins?
 	- [x] fazer uso da Roles para os tipos de utilizador;
-- [ ] É obrigatorio o uso de Extensions  mais expeficicamente "Sessions";
+- [ ] É obrigatorio o uso de Extensions  mais expeficicamente "Sessions"; Não.
 
 ## Tarefas
 - [x] Criação inicial do projeto usando o GitHub;
@@ -73,12 +73,14 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [ ] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
 	- [ ]  Procurar por "IdentityUserRoleManagement" e instalar
 - [ ] startup.cs: Inserir dados SQL;
-	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76;
+	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76; Slide 68 Teorica CodeFirst1
 - [ ] Verificar validações de dados nos formularios (importante);
-- [ ] Uso de Extensions "Sessions";
-
+*não é necessário* - [ ] Uso de Extensions "Sessions";
+- [ ] Criar os controladores e gerar as views com recurso ao "scaffolding";
+	- [ ] Definir vistas e controladores para operações específicas;
+	- [ ] Criar vistas e controladores para operações específicas;
 - [ ] Uso de Ajax no projeto;
-- [ ] Envio de mails;
+- [ ] Envio de mails; host free email server ASP.NET
 - [ ] Facebook/Google/Twitter? ver-> App_Start\Startup.Auth.cs;
 - [ ] Integração Gmaps para ver moradas;
 - [ ] Embelezar o front end;
