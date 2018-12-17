@@ -208,9 +208,9 @@
     <Compile Include="Models\Recolha.cs" />
     <Compile Include="Models\TiposUtilizador.cs" />
     <Compile Include="Models\TiposVeiculo.cs" />
-    <Compile Include="Models\Utilizador.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Utilizador.cs" />
     <Compile Include="Models\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
