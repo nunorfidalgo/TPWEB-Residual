@@ -19,7 +19,8 @@ namespace TPWEB_Residual.Models
         }
 
         [ForeignKey("Utilizador")]
-        public int UtilizadorId { get; set; }
+        public override string Id { get; set; }
+
         public virtual Utilizador Utilizador { get; set; } //virtual
 
     }

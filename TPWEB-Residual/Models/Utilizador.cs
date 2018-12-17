@@ -13,7 +13,7 @@ namespace TPWEB_Residual.Models
         [Required]
         [Key]
         [Column(Order = 1)]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         //[Key, Column(Order = 2)]
         //[ForeignKey("Docente")]
@@ -47,5 +47,6 @@ namespace TPWEB_Residual.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataRegisto { get; set; } = DateTime.Now;
 
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }
