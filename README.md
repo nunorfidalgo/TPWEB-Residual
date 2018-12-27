@@ -47,7 +47,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 - [x] Criação dos modelos de dados iniciais;
 	- [x] Uso de DataAnotations;
 - [x] Abordagem de "Code First" para a criação da base de dados;
-	- Vamos fazer uso das ferramentas "Entity Framework Power Tools" como forma de criar a base de dados sem estarmos constantemente a adicionar migrações e a fazer updates para corrigir erros;
+	- [x] Vamos fazer uso das ferramentas "Entity Framework Power Tools" como forma de criar a base de dados sem estarmos constantemente a adicionar migrações e a fazer updates para corrigir erros;
 - [x] Instalar o Entity Framework;
 	- [x] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
 	- [x] Procurar por "EntityFramework" instalar a versão > 6.0 
@@ -63,7 +63,6 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [x] Enable-Migrations -> Enable-Migrations -ContextTypeName TPWEB_Residual.Models.ResidualContext;
 	- [x] Add-Migration MigracaoInicial;
 	- [x] Update-Database (Não esqueçer de selecionar a opção de "Show all files" no "Solution Explorer" e se abrir o "Server Explorer" em View->Other Windows);
-
 - [ ] Instalar e configurar o "IdentityUserRoleManagement";
 	- [ ] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
 	- [ ]  Procurar por "IdentityUserRoleManagement" e instalar
@@ -73,7 +72,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [x] Registo de login ja tem algumas verificações iniciais;
 	- [x] Recolhas com algumas verificações;
 - [x] Registo e login feito;
-	- [ ] Em falta, operadores e admins (criar uma "pasta" para estes acessos);
+	- [ ] Em falta, operadores e admins (criar uma "pasta" tipo "http:/localhost/acessos" para os acessos admin e op);
 - [x] Criar os controladores e gerar as views com recurso ao "scaffolding";
 	- [x] Gerei as Recolhas;
 	- [ ] Veiculos
@@ -91,4 +90,4 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [ ] Imagens de fundo nas várias secções;
 	- [ ] Colocar os links para dos extras;
 - [ ] Exportar o diagrama final da base de dados ao gerar o modelo ER com "Entity Framework Power Tools" e salvar como imagems para colocar no relatório e no github;
- - [ ] falar do uso desta ferramenta para o desenvolvimento do trabalho e em diminuição de fazer migrações;
+	- [ ] falar do uso desta ferramenta para o desenvolvimento do trabalho e em diminuição de fazer migrações;
