@@ -17,7 +17,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 
 ## NOTAS:
 - [ ] Como fazer log? "logs class asp.net mvc" ("logger", "nlog") catalogando erros e gerando logs.
-- [] exportar a bd para ficheiro sql
+- [ ] exportar a bd para ficheiro sql
 
 ## Extras
 - [ ] OpenStreetMaps/GoogleMaps
@@ -38,9 +38,9 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 * Admins
 
 ## Dúvidas
- - [x] Criar uma class pessoas para os cidadoes/operadores/admins?
+- [x] Criar uma class pessoas para os cidadoes/operadores/admins?
 	- [x] fazer uso da Roles para os tipos de utilizador;
-- [ ] É obrigatorio o uso de Extensions  mais expeficicamente "Sessions"; Não.
+- [x] É obrigatorio o uso de Extensions  mais expeficicamente "Sessions"; Não.
 
 ## Tarefas
 - [x] Criação inicial do projeto usando o GitHub;
@@ -63,20 +63,22 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [x] Enable-Migrations -> Enable-Migrations -ContextTypeName TPWEB_Residual.Models.ResidualContext;
 	- [x] Add-Migration MigracaoInicial;
 	- [x] Update-Database (Não esqueçer de selecionar a opção de "Show all files" no "Solution Explorer" e se abrir o "Server Explorer" em View->Other Windows);
-- [x] Registo e login feito;
-	- [ ] Em falta, operadores e admins;
-- [x] Criar os controladores e gerar as views com recurso ao "scaffolding";
-	- [x] Gerei as Recolhas;
-	- [ ] Definir vistas e controladores para operações específicas;
-	- [ ] Criar vistas e controladores para operações específicas;
+
 - [ ] Instalar e configurar o "IdentityUserRoleManagement";
 	- [ ] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
 	- [ ]  Procurar por "IdentityUserRoleManagement" e instalar
 - [ ] startup.cs: Inserir dados SQL;
-	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76; Slide 68 Teorica CodeFirst1
+	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76; Slide 68 Teorica CodeFirst1 (para gerar um admin, operador e cidadoes na BD para testar na defesa e durant o decurso do projecto)
 - [ ] Verificar validações de dados nos formularios (importante);
-*não é necessário* - [ ] Uso de Extensions "Sessions";
-- [ ] Criar os controladores e gerar as views com recurso ao "scaffolding";
+	- [x] Registo de login ja tem algumas verificações iniciais;
+	- [x] Recolhas com algumas verificações;
+- [x] Registo e login feito;
+	- [ ] Em falta, operadores e admins (criar uma "pasta" para estes acessos);
+- [x] Criar os controladores e gerar as views com recurso ao "scaffolding";
+	- [x] Gerei as Recolhas;
+	- [ ] Veiculos
+	- [ ] Falta informação;
+	- [ ] Não esquecer as autorizações nas páginas;
 	- [ ] Definir vistas e controladores para operações específicas;
 	- [ ] Criar vistas e controladores para operações específicas;
 - [ ] Uso de Ajax no projeto;
@@ -84,4 +86,9 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 - [ ] Facebook/Google/Twitter? ver-> App_Start\Startup.Auth.cs;
 - [ ] Integração Gmaps para ver moradas;
 - [ ] Embelezar o front end;
+	- [x] Titulo da aplicação;
+	- [ ] Cores de fundo em verde(ecologico);
+	- [ ] Imagens de fundo nas várias secções;
+	- [ ] Colocar os links para dos extras;
 - [ ] Exportar o diagrama final da base de dados ao gerar o modelo ER com "Entity Framework Power Tools" e salvar como imagems para colocar no relatório e no github;
+ - [ ] falar do uso desta ferramenta para o desenvolvimento do trabalho e em diminuição de fazer migrações;
