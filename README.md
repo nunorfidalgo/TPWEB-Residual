@@ -63,9 +63,10 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [x] Enable-Migrations -> Enable-Migrations -ContextTypeName TPWEB_Residual.Models.ResidualContext;
 	- [x] Add-Migration MigracaoInicial;
 	- [x] Update-Database (Não esqueçer de selecionar a opção de "Show all files" no "Solution Explorer" e se abrir o "Server Explorer" em View->Other Windows);
-- [ ] Instalar e configurar o "IdentityUserRoleManagement";
-	- [ ] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
-	- [ ]  Procurar por "IdentityUserRoleManagement" e instalar
+- [x] Instalar e configurar o "IdentityUserRoleManagement";
+	- [x] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
+	- [x] Procurar por "IdentityUserRoleManagement" e instalar
+	- [ ] Configurar IdentityUserRoleManagement
 - [ ] startup.cs: Inserir dados SQL;
 	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76; Slide 68 Teorica CodeFirst1 (para gerar um admin, operador e cidadoes na BD para testar na defesa e durant o decurso do projecto)
 - [ ] Verificar validações de dados nos formularios (importante);
