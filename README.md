@@ -69,7 +69,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 - [ ] startup.cs: Inserir dados SQL;
 	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76; Slide 68 Teorica CodeFirst1
 - [ ] Verificar validações de dados nos formularios (importante);
-*não é necessário* - [ ] Uso de Extensions "Sessions";
+- [ ] Uso de Extensions "Sessions"; *não é necessário*
 - [ ] Criar os controladores e gerar as views com recurso ao "scaffolding";
 	- [ ] Definir vistas e controladores para operações específicas;
 	- [ ] Criar vistas e controladores para operações específicas;
