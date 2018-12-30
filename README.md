@@ -75,7 +75,7 @@ Implementação de um sistema Web para gestão de resíduos que fornece um conju
 - [ ] Embelezar o front end;
 	- [x] Titulo da aplicação;
 	- [ ] Menus
-		- [ ] Adicionei: Recolhas e Veiculos
+		- [x] Adicionei: Recolhas e Veiculos
 	- [ ] Cores de fundo em verde (ecologico);
 	- [ ] Imagens de fundo nas várias secções;
 	- [ ] Colocar os links para os extras (ver tarefa anterior [Extras]):
