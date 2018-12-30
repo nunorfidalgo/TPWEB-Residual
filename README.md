@@ -33,7 +33,7 @@ Implementação de um sistema Web para gestão de resíduos que fornece um conju
 	- [x] Relação de 1-1 com o Utilizador e o AplicationUser, verificar com o uso da ferramenta Entity Framework Power Tools selecionando o ResidualContext->Entity Framework->View Entity Data Model (Read Only);
 		- [x] Retiramos a relação de 1-1 com o utilizador devido a não conseguirmos definir a Foreignkey com o Id do AplicationUser;
 	- [x] Alterar o nome da BD no "connectionString" em web.config;
-	- [ ] Remover ResidualContext de forma a ficarmos apenas com o AplicationContext;
+	- [x] Remover ResidualContext de forma a ficarmos apenas com o AplicationContext;
 - [x] Correção das relações das tabelas criadas;
 	- [x] Validações de dados;
 - [x] Activar migrações: 
@@ -53,9 +53,11 @@ Implementação de um sistema Web para gestão de resíduos que fornece um conju
 - [x] Registo e login feito;
 	- [ ] Em falta, operadores e admins (criar uma "pasta" tipo "http:/localhost/acessos" para os acessos admin e op);
 - [x] Criar os controladores e gerar as views com recurso ao "scaffolding";
-	- [ ] Remover Utilizadores, integrar com o ApplicationUser do modelo IdentityModels;
+	- [x] Remover Utilizadores, integrar com o ApplicationUser do modelo IdentityModels;
+	- [ ] Remover TipoUtilizadores, vamos usar as Roles para lidar com os varios tipos;
 	- [x] Gerar as Recolhas;
-	- [ ] Gerar os Veiculos;
+		- [x] Corrigi a duplicação dos tipos de material das Recolhas
+	- [x] Gerar os Veiculos;
 	- [ ] Falta informação; EcoPontos -> ler enuciado!!!!
 	- [ ] Não esquecer as autorizações nas páginas;
 	- [ ] Definir vistas e controladores para operações específicas;
@@ -72,6 +74,8 @@ Implementação de um sistema Web para gestão de resíduos que fornece um conju
 	- [ ] Integração Gmaps para ver moradas;
 - [ ] Embelezar o front end;
 	- [x] Titulo da aplicação;
+	- [ ] Menus
+		- [ ] Adicionei: Recolhas e Veiculos
 	- [ ] Cores de fundo em verde (ecologico);
 	- [ ] Imagens de fundo nas várias secções;
 	- [ ] Colocar os links para os extras (ver tarefa anterior [Extras]):

@@ -203,6 +203,7 @@
     <Compile Include="Controllers\RecolhasController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\UsersAdminController.cs" />
+    <Compile Include="Controllers\VeiculosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,7 +213,6 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ResidualContext.cs" />
     <Compile Include="Models\TiposEstados.cs" />
     <Compile Include="Models\TiposMateriais.cs" />
     <Compile Include="Models\Recolha.cs" />
@@ -220,7 +220,6 @@
     <Compile Include="Models\TiposVeiculo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Utilizador.cs" />
     <Compile Include="Models\Veiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -288,11 +287,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Recolhas\Create.cshtml" />
-    <Content Include="Views\Recolhas\Delete.cshtml" />
-    <Content Include="Views\Recolhas\Details.cshtml" />
-    <Content Include="Views\Recolhas\Edit.cshtml" />
-    <Content Include="Views\Recolhas\Index.cshtml" />
     <Content Include="Views\UsersAdmin\Index.cshtml" />
     <Content Include="Views\UsersAdmin\Edit.cshtml" />
     <Content Include="Views\UsersAdmin\Details.cshtml" />
@@ -306,6 +300,16 @@
     <Content Include="Views\InitAdmin\Success.cshtml" />
     <Content Include="Views\InitAdmin\Index.cshtml" />
     <Content Include="Views\InitAdmin\Error.cshtml" />
+    <Content Include="Views\Recolhas\Create.cshtml" />
+    <Content Include="Views\Recolhas\Delete.cshtml" />
+    <Content Include="Views\Recolhas\Details.cshtml" />
+    <Content Include="Views\Recolhas\Edit.cshtml" />
+    <Content Include="Views\Recolhas\Index.cshtml" />
+    <Content Include="Views\Veiculos\Create.cshtml" />
+    <Content Include="Views\Veiculos\Delete.cshtml" />
+    <Content Include="Views\Veiculos\Details.cshtml" />
+    <Content Include="Views\Veiculos\Edit.cshtml" />
+    <Content Include="Views\Veiculos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

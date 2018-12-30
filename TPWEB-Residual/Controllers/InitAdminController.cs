@@ -6,11 +6,12 @@ using System;
 using System.Data.Entity;
 using System.Web;
 using System.Web.Mvc;
+using System.Diagnostics;
 
 namespace TPWEB_Residual
 {
     public class InitAdminController : Controller
-    {        
+    {
         public ApplicationDbContext db;
         public DropCreateDatabaseIfModelChanges<DbContext> dbInit;
 
@@ -79,8 +80,9 @@ namespace TPWEB_Residual
                 }
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                Debug.WriteLine($"Error {ex.Message}");
                 return false;
             }
         }

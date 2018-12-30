@@ -6,7 +6,6 @@ using System.Web;
 
 namespace TPWEB_Residual.Models
 {
-
     public enum TiposUtilizador
     {
         [Description("Cidadão")]

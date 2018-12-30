@@ -30,13 +30,10 @@
             @Html.DisplayNameFor(model => model.DataRegisto)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoResiduo)
+            @Html.DisplayNameFor(model => model.Material)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Estado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Material)
         </th>
         <th></th>
     </tr>
@@ -62,13 +59,10 @@
             @Html.DisplayFor(modelItem => item.DataRegisto)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TipoResiduo)
+            @Html.DisplayFor(modelItem => item.Material)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Estado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Material)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.RecolhaId }) |
