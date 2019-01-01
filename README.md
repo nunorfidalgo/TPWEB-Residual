@@ -67,7 +67,7 @@ recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a di
 	- [x] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
 	- [x] Procurar por "IdentityUserRoleManagement" e instalar
 	- [ ] Configurar IdentityUserRoleManagement
-- [ ] startup.cs: Inserir dados SQL;
+- [ ] startup.cs: Inserir dados SQL; (estive a verificar nos slides e parece-me que isto é no Configuration.cs)
 	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76; Slide 68 Teorica CodeFirst1 (para gerar um admin, operador e cidadoes na BD para testar na defesa e durant o decurso do projecto)
 - [ ] Verificar validações de dados nos formularios (importante);
 	- [x] Registo de login ja tem algumas verificações iniciais;
