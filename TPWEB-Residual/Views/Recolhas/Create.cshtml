@@ -63,10 +63,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TipoResiduo, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Material, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.TipoResiduo, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.TipoResiduo, "", new { @class = "text-danger" })
+                @Html.EnumDropDownListFor(model => model.Material, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Material, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -75,14 +75,6 @@
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(model => model.Estado, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Material, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.Material, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Material, "", new { @class = "text-danger" })
             </div>
         </div>
 

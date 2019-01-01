@@ -20,16 +20,6 @@ namespace TPWEB_Residual.Models
             return userIdentity;
         }
 
-        //public string lixo { get; set; }
-        //[ForeignKey("Utilizador")]
-        //public int UtilizadorIdFk { get; set; }
-        //public virtual Utilizador Utilizador { get; set; }
-
-
-        //[StringLength(int.MaxValue, MinimumLength = 7)]
-        //[RegularExpression(@"^(?:.*[a-z]){7,}$", ErrorMessage = "String length must be greater than or equal 7 characters.")]
-
-
         [Display(Name = "Nome")]
         [StringLength(32)]
         [Required(ErrorMessage = "Nome obrigatório!")]
@@ -94,9 +84,8 @@ namespace TPWEB_Residual.Models
             return new ApplicationDbContext();
         }
 
-        //public DbSet<Recolha> Recolhas { get; set; }
-        //public DbSet<Utilizador> Utilizadores { get; set; }
-        //public DbSet<Veiculo> Veiculos { get; set; }
+        public DbSet<Recolha> Recolhas { get; set; }
+        public DbSet<Veiculo> Veiculos { get; set; }
 
     }
 }

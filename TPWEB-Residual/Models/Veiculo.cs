@@ -19,7 +19,7 @@ namespace TPWEB_Residual.Models
         [Display(Name = "Matrícula")]
         [StringLength(8, MinimumLength = 4)]
         [Required(ErrorMessage = "Matrícula obrigatório!")]
-        [RegularExpression(@"^\(?!00)[A-Z][0-9]{2}-\(?!00)[A-Z][0-9]{2}-\(?!00)[A-Z][0-9]{2}?$", ErrorMessage = "Matrícula inválido!")] // confirmar?
+        //[RegularExpression(@"^\(?!00)[A-Z][0-9]{2}-\(?!00)[A-Z][0-9]{2}-\(?!00)[A-Z][0-9]{2}?$", ErrorMessage = "Matrícula inválido!")] // confirmar?
         public string Matricula { get; set; }
 
         [Display(Name = "Marca")]
@@ -44,11 +44,12 @@ namespace TPWEB_Residual.Models
 
         [Display(Name = "Data compra")]
         [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{HH:mm:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
         public DateTime DataCompra { get; set; }
 
         [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{HH:mm:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
+
         public DateTime DataRegisto { get; set; } = DateTime.Now;
 
         public TiposVeiculo TipoVeiculo { get; set; }

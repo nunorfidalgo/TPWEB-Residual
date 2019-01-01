@@ -48,13 +48,12 @@ namespace TPWEB_Residual.Models
         [Display(Name = "Data registo")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
-        public DateTime DataRegisto { get; set; }
 
-        public TiposMateriais TipoResiduo { get; set; }
-        public TiposEstados Estado { get; set; }
+        public DateTime DataRegisto { get; set; } = DateTime.Now;
+
         public TiposMateriais Material { get; set; }
+        public TiposEstados Estado { get; set; }
 
-        //public ICollection<Utilizador> Utilizador { get; set; }
         public ICollection<ApplicationUser> Utilizador { get; set; }
 
     }
