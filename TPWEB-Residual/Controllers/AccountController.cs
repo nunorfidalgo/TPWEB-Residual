@@ -153,17 +153,17 @@ namespace TPWEB_Residual.Controllers
             {
                 var user = new ApplicationUser
                 {
-                    UserName = model.Email,
+                    //UserName = model.Email,
                     Email = model.Email,
-                    Nome = model.Nome,
-                    Apelido = model.Apelido,
-                    Morada = model.Morada,
-                    Localidade = model.Localidade,
-                    DataNascimento = model.DataNascimento,
-                    BI_CC = model.BI_CC,
-                    NIF = model.NIF,
-                    CodigoPostal = model.CodigoPostal,
-                    DataRegisto = DateTime.Now
+                    //Nome = model.Nome,
+                    //Apelido = model.Apelido,
+                    //Morada = model.Morada,
+                    //Localidade = model.Localidade,
+                    //DataNascimento = model.DataNascimento,
+                    //BI_CC = model.BI_CC,
+                    //NIF = model.NIF,
+                    //CodigoPostal = model.CodigoPostal,
+                    //DataRegisto = DateTime.Now
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

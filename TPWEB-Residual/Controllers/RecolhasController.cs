@@ -47,10 +47,12 @@ namespace TPWEB_Residual.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "RecolhaId,Quantidade,Morada,Localizacao,DataRecolha,Descricao,DataRegisto,Material,Estado")] Recolha recolha)
+        public async Task<ActionResult> Create([Bind(Include = "RecolhaId,Quantidade,Morada,DataRecolha,HoraRecolha,Descricao,DataRegisto,MateriaisReciclaveis,MateriaisPoluentes,Estado,UtilizadorId")] Recolha recolha)
         {
             if (ModelState.IsValid)
             {
+                recolha.DataRegisto = DateTime.Now;
+                recolha.Estado = TiposEstados.Pendente;
                 db.Recolhas.Add(recolha);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -79,7 +81,7 @@ namespace TPWEB_Residual.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "RecolhaId,Quantidade,Morada,Localizacao,DataRecolha,Descricao,DataRegisto,Material,Estado")] Recolha recolha)
+        public async Task<ActionResult> Edit([Bind(Include = "RecolhaId,Quantidade,Morada,DataRecolha,HoraRecolha,Descricao,DataRegisto,MateriaisReciclaveis,MateriaisPoluentes,Estado,UtilizadorId")] Recolha recolha)
         {
             if (ModelState.IsValid)
             {

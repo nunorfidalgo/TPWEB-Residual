@@ -197,26 +197,40 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EcoPontosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitAdminController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RecolhasController.cs" />
+    <Compile Include="Controllers\Recolhas___Controller.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\UsersAdminController.cs" />
     <Compile Include="Controllers\VeiculosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812170133297_MigracaoInicial.cs" />
-    <Compile Include="Migrations\201812170133297_MigracaoInicial.Designer.cs">
-      <DependentUpon>201812170133297_MigracaoInicial.cs</DependentUpon>
+    <Compile Include="Migrations\201901020550520_initial.cs" />
+    <Compile Include="Migrations\201901020550520_initial.Designer.cs">
+      <DependentUpon>201901020550520_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901020715162_correcoes.cs" />
+    <Compile Include="Migrations\201901020715162_correcoes.Designer.cs">
+      <DependentUpon>201901020715162_correcoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901020720246_correcoes1.cs" />
+    <Compile Include="Migrations\201901020720246_correcoes1.Designer.cs">
+      <DependentUpon>201901020720246_correcoes1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DataDBInitializer.cs" />
+    <Compile Include="Models\EcoPonto.cs" />
+    <Compile Include="Models\StringValueAttribute.cs" />
+    <Compile Include="Models\TiposEcoPontos.cs" />
     <Compile Include="Models\TiposEstados.cs" />
-    <Compile Include="Models\TiposMateriais.cs" />
+    <Compile Include="Models\TiposMateriaisReciclaveis.cs" />
     <Compile Include="Models\Recolha.cs" />
-    <Compile Include="Models\TiposUtilizador.cs" />
+    <Compile Include="Models\TiposMateriaisPoluentes.cs" />
     <Compile Include="Models\TiposVeiculo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -252,7 +266,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\leaflet\leaf-demo.js" />
+    <Content Include="Scripts\leaflet\pin24.png" />
+    <Content Include="Scripts\leaflet\pin48.png" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="SQL\dbo.EcoPontos.data.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -300,16 +318,22 @@
     <Content Include="Views\InitAdmin\Success.cshtml" />
     <Content Include="Views\InitAdmin\Index.cshtml" />
     <Content Include="Views\InitAdmin\Error.cshtml" />
-    <Content Include="Views\Recolhas\Create.cshtml" />
-    <Content Include="Views\Recolhas\Delete.cshtml" />
-    <Content Include="Views\Recolhas\Details.cshtml" />
-    <Content Include="Views\Recolhas\Edit.cshtml" />
-    <Content Include="Views\Recolhas\Index.cshtml" />
+    <Content Include="Scripts\leaflet\markers.json" />
     <Content Include="Views\Veiculos\Create.cshtml" />
     <Content Include="Views\Veiculos\Delete.cshtml" />
     <Content Include="Views\Veiculos\Details.cshtml" />
     <Content Include="Views\Veiculos\Edit.cshtml" />
     <Content Include="Views\Veiculos\Index.cshtml" />
+    <Content Include="Views\EcoPontos\Create.cshtml" />
+    <Content Include="Views\EcoPontos\Delete.cshtml" />
+    <Content Include="Views\EcoPontos\Details.cshtml" />
+    <Content Include="Views\EcoPontos\Edit.cshtml" />
+    <Content Include="Views\EcoPontos\Index.cshtml" />
+    <Content Include="Views\Recolhas\Create.cshtml" />
+    <Content Include="Views\Recolhas\Delete.cshtml" />
+    <Content Include="Views\Recolhas\Details.cshtml" />
+    <Content Include="Views\Recolhas\Edit.cshtml" />
+    <Content Include="Views\Recolhas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,8 +352,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812170133297_MigracaoInicial.resx">
-      <DependentUpon>201812170133297_MigracaoInicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901020550520_initial.resx">
+      <DependentUpon>201901020550520_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901020715162_correcoes.resx">
+      <DependentUpon>201901020715162_correcoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901020720246_correcoes1.resx">
+      <DependentUpon>201901020720246_correcoes1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

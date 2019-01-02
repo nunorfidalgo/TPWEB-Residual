@@ -3,10 +3,25 @@ namespace TPWEB_Residual.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class MigracaoInicial : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.EcoPontos",
+                c => new
+                    {
+                        Id = c.String(nullable: false, maxLength: 128),
+                        DataRegisto = c.DateTime(nullable: false),
+                        Tipo = c.Int(nullable: false),
+                        Name = c.String(),
+                        URL = c.String(),
+                        Lng = c.Double(nullable: false),
+                        Lat = c.Double(nullable: false),
+                        Info = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.Recolhas",
                 c => new
@@ -14,13 +29,13 @@ namespace TPWEB_Residual.Migrations
                         RecolhaId = c.Int(nullable: false, identity: true),
                         Quantidade = c.Int(nullable: false),
                         Morada = c.String(nullable: false, maxLength: 256),
-                        Localizacao = c.String(nullable: false, maxLength: 256),
                         DataRecolha = c.DateTime(nullable: false),
                         Descricao = c.String(nullable: false, maxLength: 32),
                         DataRegisto = c.DateTime(nullable: false),
-                        TipoResiduo = c.Int(nullable: false),
+                        MateriaisReciclaveis = c.Int(nullable: false),
+                        MateriaisPoluentes = c.Int(nullable: false),
                         Estado = c.Int(nullable: false),
-                        Material = c.Int(nullable: false),
+                        UtilizadorId = c.String(),
                     })
                 .PrimaryKey(t => t.RecolhaId)
                 .Index(t => t.RecolhaId, unique: true);
@@ -30,15 +45,6 @@ namespace TPWEB_Residual.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
-                        Nome = c.String(nullable: false, maxLength: 32),
-                        Apelido = c.String(nullable: false, maxLength: 32),
-                        Morada = c.String(nullable: false, maxLength: 256),
-                        Localidade = c.String(nullable: false, maxLength: 256),
-                        DataNascimento = c.DateTime(nullable: false),
-                        BI_CC = c.String(nullable: false, maxLength: 8),
-                        NIF = c.Int(nullable: false),
-                        CodigoPostal = c.String(nullable: false, maxLength: 8),
-                        DataRegisto = c.DateTime(nullable: false),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
@@ -121,6 +127,7 @@ namespace TPWEB_Residual.Migrations
                         DataCompra = c.DateTime(nullable: false),
                         DataRegisto = c.DateTime(nullable: false),
                         TipoVeiculo = c.Int(nullable: false),
+                        UtilizadorId = c.String(),
                     })
                 .PrimaryKey(t => t.VeiculoId);
             
@@ -150,6 +157,7 @@ namespace TPWEB_Residual.Migrations
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.Recolhas");
+            DropTable("dbo.EcoPontos");
         }
     }
 }

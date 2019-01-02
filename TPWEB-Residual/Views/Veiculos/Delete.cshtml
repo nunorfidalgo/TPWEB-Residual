@@ -4,7 +4,7 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Apagar</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -75,9 +75,18 @@
             @Html.DisplayFor(model => model.TipoVeiculo)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.UtilizadorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UtilizadorId)
+        </dd>
+
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

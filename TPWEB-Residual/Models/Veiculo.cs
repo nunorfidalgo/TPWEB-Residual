@@ -9,8 +9,21 @@ using System.Web;
 namespace TPWEB_Residual.Models
 {
     [Table("Veiculos")]
-    public class Veiculo
+    public partial class Veiculo
     {
+        //public Veiculo(string matricula, string marca, string modelo, string cor, int capacidade, DateTime dataCompra, TiposVeiculo tipoVeiculo, string utilizadorId)
+        //{
+        //    Matricula = matricula;
+        //    Marca = marca;
+        //    Modelo = modelo;
+        //    Cor = cor;
+        //    Capacidade = capacidade;
+        //    DataCompra = dataCompra;
+        //    DataRegisto = DateTime.Now;
+        //    TipoVeiculo = tipoVeiculo;
+        //    UtilizadorId = utilizadorId;
+        //}
+
         [Required]
         [Key]
         [Column(Order = 1)]
@@ -37,23 +50,25 @@ namespace TPWEB_Residual.Models
         [Required(ErrorMessage = "Cor obrigatório!")]
         public string Cor { get; set; }
 
-        [Display(Name = "Capacidade")]
+        [Display(Name = "Capacidade (5 Ton)")]
         [Required(ErrorMessage = "Capacidade obrigatório!")]
         [Range(1, 5000)] // 5000 quilos = 5 Ton
         public int Capacidade { get; set; }
 
         [Display(Name = "Data compra")]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataCompra { get; set; }
 
+        [Display(Name = "Data/hora de registo")]
         [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
-
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}")]
         public DateTime DataRegisto { get; set; } = DateTime.Now;
 
         public TiposVeiculo TipoVeiculo { get; set; }
 
+        [ForeignKey("Utilizador")]
+        public string UtilizadorId { get; set; }
         public ICollection<ApplicationUser> Utilizador { get; set; }
     }
 }

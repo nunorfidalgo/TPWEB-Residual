@@ -1,12 +1,24 @@
-﻿@{
+﻿@using TPWEB_Residual.Models;
+@{
+    var data = ViewBag.Data;
+}
+
+<script type="text/javascript">
+    var markers_data = @{@Html.Raw(Json.Encode(data));}
+    console.log('markers_data: ' + JSON.stringify(markers_data));
+</script>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+@*<div class="jumbotron">
+        <h1>ASP.NET</h1>
+            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+            <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>*@
+
+<div id="map" style="height: 450px; border: 1px solid #AAA;"></div>
 
 <div class="row">
     <div class="col-md-4">
@@ -29,3 +41,6 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+@Scripts.Render("~/Scripts/leaflet/markers.json")
+@Scripts.Render("~/Scripts/leaflet/leaf.js")
