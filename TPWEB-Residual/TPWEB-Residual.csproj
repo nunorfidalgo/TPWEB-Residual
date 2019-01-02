@@ -211,11 +211,27 @@
     <Compile Include="Migrations\201812170133297_MigracaoInicial.Designer.cs">
       <DependentUpon>201812170133297_MigracaoInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812300425345_correcoes.cs" />
+    <Compile Include="Migrations\201812300425345_correcoes.Designer.cs">
+      <DependentUpon>201812300425345_correcoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901010242095_CorrecaoRecolha.cs" />
+    <Compile Include="Migrations\201901010242095_CorrecaoRecolha.Designer.cs">
+      <DependentUpon>201901010242095_CorrecaoRecolha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901010309499_CorrecaoRecolha1.cs" />
+    <Compile Include="Migrations\201901010309499_CorrecaoRecolha1.Designer.cs">
+      <DependentUpon>201901010309499_CorrecaoRecolha1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Markers.cs" />
+    <Compile Include="Models\StringValueAttribute.cs" />
+    <Compile Include="Models\TiposEcoPontos.cs" />
     <Compile Include="Models\TiposEstados.cs" />
-    <Compile Include="Models\TiposMateriais.cs" />
+    <Compile Include="Models\TiposMateriaisReciclaveis.cs" />
     <Compile Include="Models\Recolha.cs" />
+    <Compile Include="Models\TiposMateriaisPoluentes.cs" />
     <Compile Include="Models\TiposUtilizador.cs" />
     <Compile Include="Models\TiposVeiculo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -252,6 +268,9 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\leaflet\leaf.js" />
+    <Content Include="Scripts\leaflet\pin24.png" />
+    <Content Include="Scripts\leaflet\pin48.png" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -300,16 +319,17 @@
     <Content Include="Views\InitAdmin\Success.cshtml" />
     <Content Include="Views\InitAdmin\Index.cshtml" />
     <Content Include="Views\InitAdmin\Error.cshtml" />
-    <Content Include="Views\Recolhas\Create.cshtml" />
-    <Content Include="Views\Recolhas\Delete.cshtml" />
-    <Content Include="Views\Recolhas\Details.cshtml" />
-    <Content Include="Views\Recolhas\Edit.cshtml" />
-    <Content Include="Views\Recolhas\Index.cshtml" />
     <Content Include="Views\Veiculos\Create.cshtml" />
     <Content Include="Views\Veiculos\Delete.cshtml" />
     <Content Include="Views\Veiculos\Details.cshtml" />
     <Content Include="Views\Veiculos\Edit.cshtml" />
     <Content Include="Views\Veiculos\Index.cshtml" />
+    <Content Include="Views\Recolhas\Create.cshtml" />
+    <Content Include="Views\Recolhas\Delete.cshtml" />
+    <Content Include="Views\Recolhas\Details.cshtml" />
+    <Content Include="Views\Recolhas\Edit.cshtml" />
+    <Content Include="Views\Recolhas\Index.cshtml" />
+    <Content Include="Scripts\leaflet\markers.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,6 +350,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201812170133297_MigracaoInicial.resx">
       <DependentUpon>201812170133297_MigracaoInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812300425345_correcoes.resx">
+      <DependentUpon>201812300425345_correcoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901010242095_CorrecaoRecolha.resx">
+      <DependentUpon>201901010242095_CorrecaoRecolha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901010309499_CorrecaoRecolha1.resx">
+      <DependentUpon>201901010309499_CorrecaoRecolha1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

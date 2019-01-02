@@ -51,6 +51,9 @@ namespace TPWEB_Residual.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Debug.WriteLine($"Error {recolha.ToString()}");
+                recolha.DataRegisto = DateTime.Now;
+                recolha.Estado = TiposEstados.Pendente;
                 db.Recolhas.Add(recolha);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

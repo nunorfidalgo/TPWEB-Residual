@@ -10,6 +10,8 @@ namespace TPWEB_Residual.Models
     [Table("Recolhas")]
     public class Recolha
     {
+        public int test;
+
         [Required]
         [Key]
         [Column(Order = 1)]
@@ -33,10 +35,10 @@ namespace TPWEB_Residual.Models
         [Required(ErrorMessage = "Localizacao obrigatório!")]
         public string Localizacao { get; set; }
 
-        [Display(Name = "Data recolha")]
-        [DataType(DataType.Date)]
+        [Display(Name = "Data/hora da recolha")]
+        [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
-        [Required(ErrorMessage = "Data recolha obrigatório!")]
+        [Required(ErrorMessage = "Data/hora de recolha obrigatório!")]
         public DateTime DataRecolha { get; set; }
 
         [Display(Name = "Descrição")]
@@ -45,14 +47,14 @@ namespace TPWEB_Residual.Models
         [DataType(DataType.MultilineText)]
         public string Descricao { get; set; }
 
-        [Display(Name = "Data registo")]
-        [DataType(DataType.Date)]
+        [Display(Name = "Data/hora de registo")]
+        [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm}", ApplyFormatInEditMode = true)]
-
         public DateTime DataRegisto { get; set; } = DateTime.Now;
 
-        public TiposMateriais Material { get; set; }
-        public TiposEstados Estado { get; set; }
+        public TiposMateriaisReciclaveis MateriaisReciclaveis { get; set; }
+        public TiposMateriaisPoluentes MateriaisPoluentes { get; set; }
+        public TiposEstados Estado { get; set; } = TiposEstados.Pendente;
 
         public ICollection<ApplicationUser> Utilizador { get; set; }
 

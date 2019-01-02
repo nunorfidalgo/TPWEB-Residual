@@ -8,14 +8,19 @@ namespace TPWEB_Residual.Models
 {
     public enum TiposVeiculo
     {
+        [StringValue("Carinha")]
         [Description("Carinha")]
-        Carrinha,
+        Carrinha = 1,
+        [StringValue("Camião")]
         [Description("Camião")]
         Camiao,
+        [StringValue("Carro")]
         [Description("Carro")]
         Carro,
+        [StringValue("Cisterna")]
         [Description("Cisterna")]
         Cisterna,
+        [StringValue("Outro")]
         [Description("Outro")]
         Outro
     }
