@@ -1,4 +1,4 @@
-console.log('markers: ' + JSON.stringify(markers));
+//console.log('markers: ' + JSON.stringify(markers));
 //console.log('data: ' + JSON.stringify(data));
 
 var map = L.map('map', {
@@ -12,7 +12,7 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     subdomains: ['a', 'b', 'c']
 }).addTo(map);
 
-var myURL = jQuery('script[src$="leaf.js"]').attr('src').replace('leaf.js', '');
+var myURL = jQuery('script[src$="leaf-demo.js"]').attr('src').replace('leaf-demo.js', '');
 
 var myIcon = L.icon({
     iconUrl: myURL + 'pin24.png',

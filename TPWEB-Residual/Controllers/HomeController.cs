@@ -9,6 +9,8 @@ namespace TPWEB_Residual.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Index()
         {
             //Markers mark = new Markers("Canada", "https://en.wikipedia.org/wiki/Canada", "informações aqui", 56.130366, -106.346771);
@@ -17,11 +19,12 @@ namespace TPWEB_Residual.Controllers
             ////      "lat": 56.130366,
             ////      "lng": -106.346771
             //ViewBag.Message = mark;
-            var markers = new List<Markers> { };
-            markers.Add(new Markers("Canada", "https://en.wikipedia.org/wiki/Canada", "informações Canada", 56.130366, -106.346771));
-            markers.Add(new Markers("Anguilla", "https://en.wikipedia.org/wiki/Anguilla", "informações Anguilla", 18.220554, -63.068615));
-            markers.Add(new Markers("Japan", "https://en.wikipedia.org/wiki/Japan", "informações Japan", 36.204824, 138.252924));
-            ViewBag.Data = markers;
+
+
+            //var data = db.EcoPontos.ToList();
+            List<EcoPonto> ecopontos = new List<EcoPonto>();
+            ecopontos = db.EcoPontos.ToList();
+            ViewBag.Message = ecopontos;
             return View();
         }
 

@@ -52,13 +52,17 @@ Implementação de um sistema Web para gestão de resíduos que fornece um conju
 - [x] Instalar e configurar o "IdentityUserRoleManagement";
 	- [x] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
 	- [x] Procurar por "IdentityUserRoleManagement" e instalar
-	- [ ] Configurar IdentityUserRoleManagement
-- [ ] startup.cs: Inserir dados SQL;
-	- [ ] Averiguar se com a Fluent API é possivel inserir os dados ver slide 76; Slide 68 Teorica CodeFirst1 (para gerar um admin, operador e cidadoes na BD para testar na defesa e durant o decurso do projecto)
+	- [ ] Configurar IdentityUserRoleManagement;
+- [ ] Inicialização de dados nas tabelas;
+	- [ ] startup.cs: Adicionar a funcção de inicialização;
+	- [ ] Slide 68 Teorica CodeFirst1 (para gerar um admin, operador e cidadoes na BD para testar na defesa e durant o decurso do projecto)
+	- [x] Função feita, mas não está a ser possivel testar;
+	- [ ] Tem de se mudar para o ficheiro Configurations.cs na pasta Migrations;
 - [ ] Verificar validações de dados nos formularios (importante);
 	- [x] Registo de login ja tem algumas verificações iniciais;
 	- [x] Recolhas com algumas verificações;
 - [x] Registo e login feito;
+	- [ ] Tem de ser alterado;
 	- [ ] Em falta, operadores e admins (criar uma "pasta" tipo "http:/localhost/acessos" para os acessos admin e op);
 - [x] Criar os controladores e gerar as views com recurso ao "scaffolding";
 	- [x] Remover Utilizadores, integrar com o ApplicationUser do modelo IdentityModels;

@@ -18,10 +18,10 @@
             @Html.DisplayNameFor(model => model.Morada)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Localizacao)
+            @Html.DisplayNameFor(model => model.DataRecolha)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataRecolha)
+            @Html.DisplayNameFor(model => model.HoraRecolha)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Descricao)
@@ -30,10 +30,16 @@
             @Html.DisplayNameFor(model => model.DataRegisto)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Material)
+            @Html.DisplayNameFor(model => model.MateriaisReciclaveis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MateriaisPoluentes)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UtilizadorId)
         </th>
         <th></th>
     </tr>
@@ -47,10 +53,10 @@
             @Html.DisplayFor(modelItem => item.Morada)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Localizacao)
+            @Html.DisplayFor(modelItem => item.DataRecolha)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DataRecolha)
+            @Html.DisplayFor(modelItem => item.HoraRecolha)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Descricao)
@@ -59,10 +65,16 @@
             @Html.DisplayFor(modelItem => item.DataRegisto)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Material)
+            @Html.DisplayFor(modelItem => item.MateriaisReciclaveis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MateriaisPoluentes)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UtilizadorId)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.RecolhaId }) |

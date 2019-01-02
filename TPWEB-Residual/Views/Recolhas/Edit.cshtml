@@ -34,18 +34,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Localizacao, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Localizacao, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Localizacao, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.DataRecolha, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DataRecolha, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DataRecolha, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HoraRecolha, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HoraRecolha, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.HoraRecolha, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -66,10 +66,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Material, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.MateriaisReciclaveis, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EnumDropDownListFor(model => model.Material, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Material, "", new { @class = "text-danger" })
+                @Html.EnumDropDownListFor(model => model.MateriaisReciclaveis, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MateriaisReciclaveis, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MateriaisPoluentes, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.MateriaisPoluentes, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MateriaisPoluentes, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -78,6 +86,14 @@
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(model => model.Estado, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UtilizadorId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UtilizadorId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UtilizadorId, "", new { @class = "text-danger" })
             </div>
         </div>
 

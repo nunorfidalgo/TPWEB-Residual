@@ -32,8 +32,6 @@ namespace TPWEB_Residual.Models
         material_eletrico_eletronico,
         [StringValue("Pequenos objectos de metal e plástico")]
         [Description("Pequenos objectos de metal e plástico")]
-        objectos_metal_plastico,
-
-        //[StringValue("")] ,
+        objectos_metal_plastico
     }
 }

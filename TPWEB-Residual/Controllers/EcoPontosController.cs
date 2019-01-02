@@ -11,108 +11,108 @@ using TPWEB_Residual.Models;
 
 namespace TPWEB_Residual.Controllers
 {
-    [Authorize]
-    public class VeiculosController : Controller
+    public class EcoPontosController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Veiculos
+        // GET: EcoPontos
         public async Task<ActionResult> Index()
         {
-            return View(await db.Veiculos.ToListAsync());
+            return View(await db.EcoPontos.ToListAsync());
         }
 
-        // GET: Veiculos/Details/5
-        public async Task<ActionResult> Details(int? id)
+        // GET: EcoPontos/Details/5
+        public async Task<ActionResult> Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Veiculo veiculo = await db.Veiculos.FindAsync(id);
-            if (veiculo == null)
+            EcoPonto ecoPonto = await db.EcoPontos.FindAsync(id);
+            if (ecoPonto == null)
             {
                 return HttpNotFound();
             }
-            return View(veiculo);
+            return View(ecoPonto);
         }
 
-        // GET: Veiculos/Create
+        // GET: EcoPontos/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Veiculos/Create
+        // POST: EcoPontos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "VeiculoId,Matricula,Marca,Modelo,Cor,Capacidade,DataCompra,DataRegisto,TipoVeiculo,UtilizadorId")] Veiculo veiculo)
+        public async Task<ActionResult> Create([Bind(Include = "Tipo,Name,URL,Lng,Lat,Info")] EcoPonto ecoPonto)
         {
             if (ModelState.IsValid)
             {
-                db.Veiculos.Add(veiculo);
+                ecoPonto.DataRegisto = DateTime.Now;
+                db.EcoPontos.Add(ecoPonto);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            return View(veiculo);
+            return View(ecoPonto);
         }
 
-        // GET: Veiculos/Edit/5
-        public async Task<ActionResult> Edit(int? id)
+        // GET: EcoPontos/Edit/5
+        public async Task<ActionResult> Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Veiculo veiculo = await db.Veiculos.FindAsync(id);
-            if (veiculo == null)
+            EcoPonto ecoPonto = await db.EcoPontos.FindAsync(id);
+            if (ecoPonto == null)
             {
                 return HttpNotFound();
             }
-            return View(veiculo);
+            return View(ecoPonto);
         }
 
-        // POST: Veiculos/Edit/5
+        // POST: EcoPontos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "VeiculoId,Matricula,Marca,Modelo,Cor,Capacidade,DataCompra,DataRegisto,TipoVeiculo,UtilizadorId")] Veiculo veiculo)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,DataRegisto,Tipo,Name,URL,Lng,Lat,Info")] EcoPonto ecoPonto)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(veiculo).State = EntityState.Modified;
+                db.Entry(ecoPonto).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(veiculo);
+            return View(ecoPonto);
         }
 
-        // GET: Veiculos/Delete/5
-        public async Task<ActionResult> Delete(int? id)
+        // GET: EcoPontos/Delete/5
+        public async Task<ActionResult> Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Veiculo veiculo = await db.Veiculos.FindAsync(id);
-            if (veiculo == null)
+            EcoPonto ecoPonto = await db.EcoPontos.FindAsync(id);
+            if (ecoPonto == null)
             {
                 return HttpNotFound();
             }
-            return View(veiculo);
+            return View(ecoPonto);
         }
 
-        // POST: Veiculos/Delete/5
+        // POST: EcoPontos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(string id)
         {
-            Veiculo veiculo = await db.Veiculos.FindAsync(id);
-            db.Veiculos.Remove(veiculo);
+            EcoPonto ecoPonto = await db.EcoPontos.FindAsync(id);
+            db.EcoPontos.Remove(ecoPonto);
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

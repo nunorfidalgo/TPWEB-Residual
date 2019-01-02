@@ -10,6 +10,7 @@ using System.Diagnostics;
 
 namespace TPWEB_Residual
 {
+    [Authorize]
     public class InitAdminController : Controller
     {
         public ApplicationDbContext db;

@@ -1,5 +1,7 @@
 ﻿using Microsoft.Owin;
 using Owin;
+using System.Data.Entity;
+using TPWEB_Residual.Models;
 
 [assembly: OwinStartupAttribute(typeof(TPWEB_Residual.Startup))]
 namespace TPWEB_Residual
@@ -9,6 +11,7 @@ namespace TPWEB_Residual
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            //Database.SetInitializer<ApplicationDbContext>(new DataDBInitializer());
         }
     }
 }
