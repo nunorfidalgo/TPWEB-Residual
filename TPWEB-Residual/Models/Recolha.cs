@@ -73,8 +73,6 @@ namespace TPWEB_Residual.Models
         public TiposMateriaisPoluentes MateriaisPoluentes { get; set; }
         public TiposEstados Estado { get; set; } = TiposEstados.Pendente;
 
-
-
         //[ForeignKey("ApplicationUser")]
         //public string UtilizadorId { get; set; }
         //public virtual ApplicationUser ApplicationUser { get; set; }

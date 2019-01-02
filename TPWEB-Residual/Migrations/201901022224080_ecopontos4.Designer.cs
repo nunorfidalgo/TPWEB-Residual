@@ -7,13 +7,13 @@ namespace TPWEB_Residual.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class correcoes : IMigrationMetadata
+    public sealed partial class ecopontos4 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(correcoes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ecopontos4));
         
         string IMigrationMetadata.Id
         {
-            get { return "201901020715162_correcoes"; }
+            get { return "201901022224080_ecopontos4"; }
         }
         
         string IMigrationMetadata.Source

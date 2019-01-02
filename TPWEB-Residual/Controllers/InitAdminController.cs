@@ -10,7 +10,8 @@ using System.Diagnostics;
 
 namespace TPWEB_Residual
 {
-    [Authorize]
+    //[Authorize]
+    [Authorize(Roles = "Admin, Operador")]
     public class InitAdminController : Controller
     {
         public ApplicationDbContext db;
@@ -83,7 +84,6 @@ namespace TPWEB_Residual
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error {ex.Message}");
                 return false;
             }
         }

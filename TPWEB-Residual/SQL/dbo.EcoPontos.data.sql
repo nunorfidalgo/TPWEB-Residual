@@ -1,8 +1,4 @@
-﻿INSERT INTO [dbo].[EcoPontos] ([Id], [DataRegisto], [Tipo], [Name], [URL], [Lng], [Lat], [Info])
-VALUES ( '1', '12/12/2019 12:00:00', '1', 'Canada', 'https://en.wikipedia.org/wiki/Canada', '-106.346771', '56.130366', 'informações sobre o  Canada');
-
-INSERT INTO [dbo].[EcoPontos] ([Id], [DataRegisto], [Tipo], [Name], [URL], [Lng], [Lat], [Info])
-VALUES ( '2', '12/12/2019 12:00:00', '2', 'Anguilla', 'https://en.wikipedia.org/wiki/Anguilla', '-63.068615', '18.220554', 'informações sobre Anguilla');
-
-INSERT INTO [dbo].[EcoPontos] ([Id], [DataRegisto], [Tipo], [Name], [URL], [Lng], [Lat], [Info])
-VALUES ( '3', '12/12/2019 12:00:00', '3', 'Japan', 'https://en.wikipedia.org/wiki/Japan', '138.252924', '36.204824', 'informações sobre Japan');
+INSERT INTO [dbo].[EcoPontos] ([Id], [DataRegisto], [Tipo], [Name], [URL], [Longitude], [Latitude], [Info]) VALUES (N'1', N'2019-12-12 12:00:00', 1, N'Canada', N'https://en.wikipedia.org/wiki/Canada', -106.346771, 56.130366, N'informações sobre o  Canada')
+INSERT INTO [dbo].[EcoPontos] ([Id], [DataRegisto], [Tipo], [Name], [URL], [Longitude], [Latitude], [Info]) VALUES (N'2', N'2019-12-12 12:00:00', 2, N'Anguilla', N'https://en.wikipedia.org/wiki/Anguilla', -63.068615, 18.220554, N'informações sobre Anguilla')
+INSERT INTO [dbo].[EcoPontos] ([Id], [DataRegisto], [Tipo], [Name], [URL], [Longitude], [Latitude], [Info]) VALUES (N'3', N'2019-12-12 12:00:00', 3, N'Japan', N'https://en.wikipedia.org/wiki/Japan', 138.252924, 36.204824, N'informações sobre Japão')
+INSERT INTO [dbo].[EcoPontos] ([Id], [DataRegisto], [Tipo], [Name], [URL], [Longitude], [Latitude], [Info]) VALUES (N'4', N'2019-12-12 12:00:00', 5, N'Coimbra', N'https://en.wikipedia.org/wiki/Portugal', -8.4317, 40.2088, N'informações sobre este ponto')

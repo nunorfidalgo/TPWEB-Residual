@@ -30,6 +30,7 @@ namespace TPWEB_Residual.Migrations
                         Quantidade = c.Int(nullable: false),
                         Morada = c.String(nullable: false, maxLength: 256),
                         DataRecolha = c.DateTime(nullable: false),
+                        HoraRecolha = c.DateTime(nullable: false),
                         Descricao = c.String(nullable: false, maxLength: 32),
                         DataRegisto = c.DateTime(nullable: false),
                         MateriaisReciclaveis = c.Int(nullable: false),

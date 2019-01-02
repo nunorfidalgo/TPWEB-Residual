@@ -52,7 +52,7 @@ namespace TPWEB_Residual.Models
 
         [Display(Name = "Capacidade (5 Ton)")]
         [Required(ErrorMessage = "Capacidade obrigatório!")]
-        [Range(1, 5000)] // 5000 quilos = 5 Ton
+        [Range(1, 5)] // 5 quilos = 5 Ton
         public int Capacidade { get; set; }
 
         [Display(Name = "Data compra")]

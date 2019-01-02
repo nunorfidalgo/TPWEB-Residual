@@ -12,6 +12,7 @@ using TPWEB_Residual.Models;
 
 namespace TPWEB_Residual.Controllers
 {
+    //[Authorize(Roles = "Admin, Operador, Cidadao")]
     [Authorize]
     public class AccountController : Controller
     {
@@ -153,7 +154,7 @@ namespace TPWEB_Residual.Controllers
             {
                 var user = new ApplicationUser
                 {
-                    //UserName = model.Email,
+                    UserName = model.Email,
                     Email = model.Email,
                     //Nome = model.Nome,
                     //Apelido = model.Apelido,
@@ -168,6 +169,10 @@ namespace TPWEB_Residual.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+
+                    var currentUser = UserManager.FindByName(user.UserName);
+                    var roleresult = UserManager.AddToRole(currentUser.Id, "Cidadao");
+
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771

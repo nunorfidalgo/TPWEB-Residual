@@ -121,7 +121,7 @@ namespace TPWEB_Residual
         //
         // GET: /Users/Edit/1
         public async Task<ActionResult> Edit(string id)
-        {            
+        {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

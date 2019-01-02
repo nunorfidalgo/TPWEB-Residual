@@ -202,24 +202,35 @@
     <Compile Include="Controllers\InitAdminController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RecolhasController.cs" />
-    <Compile Include="Controllers\Recolhas___Controller.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\UsersAdminController.cs" />
     <Compile Include="Controllers\VeiculosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901020550520_initial.cs" />
-    <Compile Include="Migrations\201901020550520_initial.Designer.cs">
-      <DependentUpon>201901020550520_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201901021814249_initial.cs" />
+    <Compile Include="Migrations\201901021814249_initial.Designer.cs">
+      <DependentUpon>201901021814249_initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901020715162_correcoes.cs" />
-    <Compile Include="Migrations\201901020715162_correcoes.Designer.cs">
-      <DependentUpon>201901020715162_correcoes.cs</DependentUpon>
+    <Compile Include="Migrations\201901021815558_ecopontos.cs" />
+    <Compile Include="Migrations\201901021815558_ecopontos.Designer.cs">
+      <DependentUpon>201901021815558_ecopontos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901020720246_correcoes1.cs" />
-    <Compile Include="Migrations\201901020720246_correcoes1.Designer.cs">
-      <DependentUpon>201901020720246_correcoes1.cs</DependentUpon>
+    <Compile Include="Migrations\201901021845207_ecopontos1.cs" />
+    <Compile Include="Migrations\201901021845207_ecopontos1.Designer.cs">
+      <DependentUpon>201901021845207_ecopontos1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901022203465_ecopontos2.cs" />
+    <Compile Include="Migrations\201901022203465_ecopontos2.Designer.cs">
+      <DependentUpon>201901022203465_ecopontos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901022222343_ecopontos3.cs" />
+    <Compile Include="Migrations\201901022222343_ecopontos3.Designer.cs">
+      <DependentUpon>201901022222343_ecopontos3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901022224080_ecopontos4.cs" />
+    <Compile Include="Migrations\201901022224080_ecopontos4.Designer.cs">
+      <DependentUpon>201901022224080_ecopontos4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -266,10 +277,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\leaflet\leaf-demo.js" />
+    <Content Include="Scripts\leaflet\leaf.js" />
     <Content Include="Scripts\leaflet\pin24.png" />
     <Content Include="Scripts\leaflet\pin48.png" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="SQL\dbo.AspNetUsers.data.sql" />
     <Content Include="SQL\dbo.EcoPontos.data.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -324,16 +336,16 @@
     <Content Include="Views\Veiculos\Details.cshtml" />
     <Content Include="Views\Veiculos\Edit.cshtml" />
     <Content Include="Views\Veiculos\Index.cshtml" />
-    <Content Include="Views\EcoPontos\Create.cshtml" />
-    <Content Include="Views\EcoPontos\Delete.cshtml" />
-    <Content Include="Views\EcoPontos\Details.cshtml" />
-    <Content Include="Views\EcoPontos\Edit.cshtml" />
-    <Content Include="Views\EcoPontos\Index.cshtml" />
     <Content Include="Views\Recolhas\Create.cshtml" />
     <Content Include="Views\Recolhas\Delete.cshtml" />
     <Content Include="Views\Recolhas\Details.cshtml" />
     <Content Include="Views\Recolhas\Edit.cshtml" />
     <Content Include="Views\Recolhas\Index.cshtml" />
+    <Content Include="Views\EcoPontos\Create.cshtml" />
+    <Content Include="Views\EcoPontos\Delete.cshtml" />
+    <Content Include="Views\EcoPontos\Details.cshtml" />
+    <Content Include="Views\EcoPontos\Edit.cshtml" />
+    <Content Include="Views\EcoPontos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -352,14 +364,23 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901020550520_initial.resx">
-      <DependentUpon>201901020550520_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901021814249_initial.resx">
+      <DependentUpon>201901021814249_initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901020715162_correcoes.resx">
-      <DependentUpon>201901020715162_correcoes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901021815558_ecopontos.resx">
+      <DependentUpon>201901021815558_ecopontos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201901020720246_correcoes1.resx">
-      <DependentUpon>201901020720246_correcoes1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901021845207_ecopontos1.resx">
+      <DependentUpon>201901021845207_ecopontos1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901022203465_ecopontos2.resx">
+      <DependentUpon>201901022203465_ecopontos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901022222343_ecopontos3.resx">
+      <DependentUpon>201901022222343_ecopontos3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901022224080_ecopontos4.resx">
+      <DependentUpon>201901022224080_ecopontos4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

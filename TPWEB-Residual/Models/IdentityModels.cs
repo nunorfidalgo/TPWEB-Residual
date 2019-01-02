@@ -87,6 +87,6 @@ namespace TPWEB_Residual.Models
         public DbSet<Recolha> Recolhas { get; set; }
         public DbSet<Veiculo> Veiculos { get; set; }
         public object IdentityRole { get; internal set; }
-        //public object EcoPontos { get; internal set; }
+
     }
 }

@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Lista</h2>
+<br />
+@*<h2>Lista</h2>*@
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -35,9 +35,9 @@
         <th>
             @Html.DisplayNameFor(model => model.TipoVeiculo)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UtilizadorId)
-        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.UtilizadorId)
+            </th>*@
         <th></th>
     </tr>
 
@@ -68,12 +68,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TipoVeiculo)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UtilizadorId)
-            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.UtilizadorId)
+                </td>*@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.VeiculoId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.VeiculoId }) |
+                @*@Html.ActionLink("Details", "Details", new { id = item.VeiculoId }) |*@
                 @Html.ActionLink("Delete", "Delete", new { id = item.VeiculoId })
             </td>
         </tr>
