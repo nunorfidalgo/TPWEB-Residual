@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -7,6 +8,7 @@ using TPWEB_Residual.Models;
 
 namespace TPWEB_Residual.Controllers
 {
+    //[Authorize(Roles = "Admin, Operador, Cidadao")]
     public class HomeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -20,10 +22,16 @@ namespace TPWEB_Residual.Controllers
             ////      "lng": -106.346771
             //ViewBag.Message = mark;
 
-
             //var data = db.EcoPontos.ToList();
-            List<EcoPonto> ecopontos = new List<EcoPonto>();
-            ecopontos = db.EcoPontos.ToList();
+            //Debug.WriteLine("Hello, world!");
+            //Console.WriteLine("Hello, world!");
+            //Debug.WriteLine(ecoPonto.ToString());
+            //List<EcoPonto> ecopontos = new List<EcoPonto>();
+            //ecopontos = db.EcoPontos.ToList();
+
+            Debug.WriteLine("EcoPontos!");
+            List<EcoPonto> ecopontos = db.EcoPontos.ToList(); //This selects all rows from the table
+            Debug.WriteLine(ecopontos.ToString());
             ViewBag.Message = ecopontos;
             return View();
         }

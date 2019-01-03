@@ -11,6 +11,7 @@ using TPWEB_Residual.Models;
 
 namespace TPWEB_Residual.Controllers
 {
+    [Authorize]
     public class EcoPontosController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -47,11 +48,10 @@ namespace TPWEB_Residual.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Tipo,Name,URL,Lng,Lat,Info")] EcoPonto ecoPonto)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Name,URL,Info,Latitude,Longitude,DataRegisto,Tipo")] EcoPonto ecoPonto)
         {
             if (ModelState.IsValid)
             {
-                ecoPonto.DataRegisto = DateTime.Now;
                 db.EcoPontos.Add(ecoPonto);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -80,7 +80,7 @@ namespace TPWEB_Residual.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,DataRegisto,Tipo,Name,URL,Lng,Lat,Info")] EcoPonto ecoPonto)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Name,URL,Info,Latitude,Longitude,DataRegisto,Tipo")] EcoPonto ecoPonto)
         {
             if (ModelState.IsValid)
             {

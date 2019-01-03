@@ -52,61 +52,48 @@ Implementação de um sistema Web para gestão de resíduos que fornece um conju
 - [x] Instalar e configurar o "IdentityUserRoleManagement";
 	- [x] Tools->NuGet Package Manager->Manage NuGet Package Manager for Solution:
 	- [x] Procurar por "IdentityUserRoleManagement" e instalar
-	- [ ] Configurar IdentityUserRoleManagement;
+	- [x] Configurar IdentityUserRoleManagement;
 - [ ] Inicialização de dados nas tabelas;
 	- [ ] startup.cs: Adicionar a funcção de inicialização;
 	- [ ] Slide 68 Teorica CodeFirst1 (para gerar um admin, operador e cidadoes na BD para testar na defesa e durant o decurso do projecto)
 	- [x] Função feita, mas não está a ser possivel testar;
 	- [ ] Tem de se mudar para o ficheiro Configurations.cs na pasta Migrations;
-- [ ] Verificar validações de dados nos formularios (importante);
+- [x] Verificar validações de dados nos formularios (importante);
 	- [x] Registo de login ja tem algumas verificações iniciais;
-	- [x] Recolhas com algumas verificações;
+	- [x] Recolhas/Veiculos/EcoPontos com algumas verificações;
 - [x] Registo e login feito;
-	- [ ] Tem de ser alterado;
-	- [ ] Em falta, operadores e admins (criar uma "pasta" tipo "http:/localhost/acessos" para os acessos admin e op);
+	- [x] Tem de ser alterado;
 - [x] Criar os controladores e gerar as views com recurso ao "scaffolding";
 	- [x] Remover Utilizadores, integrar com o ApplicationUser do modelo IdentityModels;
-	- [ ] Remover TipoUtilizadores, vamos usar as Roles para lidar com os varios tipos;
+	- [x] Remover TipoUtilizadores, vamos usar as Roles para lidar com os varios tipos;
 	- [x] Gerar as Recolhas;
 		- [x] Corrigi a duplicação dos tipos de material das Recolhas
-		- [ ] Corrigi a data para mostrar a data/hora
+		- [x] Corrigi a data para mostrar a data/hora
 	- [x] Gerar os Veiculos;
-	- [ ] Falta informação; EcoPontos -> ler enuciado!!!!
-	- [ ] Não esquecer as autorizações nas páginas;
-	- [ ] Definir vistas e controladores para operações específicas;
-	- [ ] Criar vistas e controladores para operações específicas;
-- [ ] Extras:
+	- [x] Falta informação; EcoPontos -> ler enuciado!!!!
+	- [x] Não esquecer as autorizações nas páginas;
+- [x] Extras:
 	- [x] OpenStreetMaps(Leaflet)
 		- [x] Colocar o mapa a funcionar;
 		- [x] Mostrar mapa de Coimbra;
 		- [x] Os marcadores estão a funcionar com informação nos popups;
 		- [ ] Adicionar EcoPontos na zona de Coimbra;
-	- [ ] Pontos Electrão
-	- [ ] EcoPilhas
-	- [ ] Pilhão
-	- [ ] ERSUC
+	- [x] Pontos Electrão
+	- [x] EcoPilha/Pilhão
+	- [x] ERSUC
 	- [ ] Uso de Ajax no projeto;
 	- [ ] Envio de mails; host free email server ASP.NET;
 	- [ ] Facebook/Google/Twitter? ver-> App_Start\Startup.Auth.cs;
-	- [ ] Integração Gmaps para ver moradas;
-- [ ] Embelezar o front end;
+- [x] Embelezar o front end;
 	- [x] Titulo da aplicação (titulo e footer);
-	- [ ] Menus
-		- [x] Adicionei: Recolhas e Veiculos
+	- [x] Menus
+		- [x] Recolhas, About, Contatos
+		- [x] Menu de admin em relação ao tipo de user que fez login; 
 	- [ ] Cores de fundo em verde (ecologico);
 	- [ ] Imagens de fundo nas várias secções;
-	- [ ] Colocar os links para os extras (ver tarefa anterior [Extras]):
+	- [x] Colocar os links para os extras (ver tarefa anterior [Extras]):
 - [ ] Exportar o diagrama final da base de dados ao gerar o modelo ER com "Entity Framework Power Tools" e salvar como imagems para colocar no relatório e no github;
 	- [ ] falar do uso desta ferramenta para o desenvolvimento do trabalho e em diminuição de fazer migrações;
 	- [ ] exportar a base de dados para ficheiro .sql -> colocar no relatorio;
 - [ ] Preparar a entrega do trabalho com a Base de Dados, retirar as pastas "obj", "bin", ".vs" e "Packages" do projecto;
-- [ ] Colocar o projeto do GitHub publico;
-  
-
-## NOTAS:
-- [ ] Como fazer logs? "logs class asp.net mvc" ("logger", "nlog") catalogando erros e gerando logs;
-
-## Dúvidas
-- [x] Criar uma class pessoas para os cidadoes/operadores/admins?
-	- [x] fazer uso da Roles para os tipos de utilizador;
-- [x] É obrigatorio o uso de Extensions  mais expeficicamente "Sessions"; Não.
+- [x] Colocar o projeto do GitHub publico;

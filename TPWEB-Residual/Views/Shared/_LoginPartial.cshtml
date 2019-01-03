@@ -14,13 +14,14 @@
                 <a class="dropdown-toggle" data-toggle="dropdown"> @Html.Raw("Hello " + User.Identity.GetUserName() + "!") <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li>@Html.ActionLink("Perfil", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
-
+                    @*<li>@Html.ActionLink("Perfil", "Index", "Manage")</li>*@
                     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
                     {
                         <li>@Html.ActionLink("Gestão Utilizadores", "Index", "UsersAdmin")</li>
                         <li>@Html.ActionLink("Gestão Cargos", "Index", "RolesAdmin")</li>
                         <li>@Html.ActionLink("Gestão EcoPontos", "Index", "EcoPontos")</li>
                         <li>@Html.ActionLink("Gestão Veículos", "Index", "Veiculos")</li>
+                        <li>@Html.ActionLink("Admins", "Index", "InitAdmin")</li>
                     }
                     else if (Request.IsAuthenticated && User.IsInRole("Operador"))
                     {

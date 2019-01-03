@@ -12,7 +12,7 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     subdomains: ['a', 'b', 'c']
 }).addTo(map);
 
-var myURL = jQuery('script[src$="leaf-demo.js"]').attr('src').replace('leaf-demo.js', '');
+var myURL = jQuery('script[src$="leaf.js"]').attr('src').replace('leaf.js', '');
 
 var myIcon = L.icon({
     iconUrl: myURL + 'pin24.png',
@@ -29,7 +29,7 @@ var myIcon = L.icon({
 //}
 
 for (var i = 0; i < markers_data.length; ++i) {
-    L.marker([markers_data[i].Lat, markers_data[i].Lng], { icon: myIcon })
-        .bindPopup('<a href="' + markers_data[i].Url + '" target="_blank">' + markers_data[i].Name + '</a> <br> <p>' + markers_data[i].Info + '<p>')
+    L.marker([markers_data[i].Latitude, markers_data[i].Longitude], { icon: myIcon })
+        .bindPopup('<a href="' + markers_data[i].URL + '" target="_blank">' + markers_data[i].Name + '</a> <br> <p>' + markers_data[i].Info + '<p>')
         .addTo(map);
 }

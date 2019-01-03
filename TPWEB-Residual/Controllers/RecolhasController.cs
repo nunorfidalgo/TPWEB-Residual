@@ -8,9 +8,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using TPWEB_Residual.Models;
+using Microsoft.AspNet.Identity;
 
 namespace TPWEB_Residual.Controllers
 {
+    [Authorize(Roles = "Admin, Operador, Cidadao")]
     public class RecolhasController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -53,6 +55,7 @@ namespace TPWEB_Residual.Controllers
             {
                 recolha.DataRegisto = DateTime.Now;
                 recolha.Estado = TiposEstados.Pendente;
+                recolha.UtilizadorId = User.Identity.GetUserId();
                 db.Recolhas.Add(recolha);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

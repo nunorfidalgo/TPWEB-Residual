@@ -8,6 +8,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using TPWEB_Residual.Models;
+using Microsoft.AspNet.Identity;
+using System.Diagnostics;
 
 namespace TPWEB_Residual.Controllers
 {
@@ -19,6 +21,8 @@ namespace TPWEB_Residual.Controllers
         // GET: Veiculos
         public async Task<ActionResult> Index()
         {
+            //var userID = User.Identity.GetUserId();
+            //Debug.WriteLine("user id: {userID}");
             return View(await db.Veiculos.ToListAsync());
         }
 
@@ -52,6 +56,12 @@ namespace TPWEB_Residual.Controllers
         {
             if (ModelState.IsValid)
             {
+                veiculo.DataRegisto = DateTime.Now;
+                //var userID = User.Identity.GetUserId();
+                //Debug.WriteLine("user id: {userID}");
+                veiculo.UtilizadorId = User.Identity.GetUserId();
+                //veiculo.UtilizadorId = "c0e10635-ac6b-4aae-bf80-adbf174729bb";
+                //veiculo.Utilizador = "c0e10635-ac6b-4aae-bf80-adbf174729bb";
                 db.Veiculos.Add(veiculo);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

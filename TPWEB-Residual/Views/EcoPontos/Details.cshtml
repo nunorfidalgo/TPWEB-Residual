@@ -4,28 +4,12 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Detalhes</h2>
+<h2>Details</h2>
 
 <div>
     <h4>EcoPonto</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.DataRegisto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.DataRegisto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Tipo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Tipo)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -43,27 +27,43 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Lng)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Lng)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Lat)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Lat)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Info)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Info)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataRegisto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataRegisto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
         </dd>
 
     </dl>

@@ -10,7 +10,7 @@ using TPWEB_Residual.Models;
 
 namespace TPWEB_Residual.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -32,9 +32,9 @@ namespace TPWEB_Residual.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -333,7 +333,7 @@ namespace TPWEB_Residual.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -384,6 +384,6 @@ namespace TPWEB_Residual.Controllers
             Error
         }
 
-#endregion
+        #endregion
     }
 }

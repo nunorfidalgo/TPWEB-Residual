@@ -10,7 +10,7 @@ using System.Web;
 namespace TPWEB_Residual.Models
 {
     [Table("EcoPontos")]
-    public partial class EcoPonto
+    public class EcoPonto
     {
         //public EcoPonto(string name, string url, string info, double lat, double lng, TiposEcoPontos tipo)
         //{
@@ -24,27 +24,27 @@ namespace TPWEB_Residual.Models
         //}
 
         [Key]
-        private string id;
+        public string Id { get; set; }
 
-        [Display(Name = "Cor")]
-        [StringLength(32)]
-        [Required(ErrorMessage = "Tem de colocar um nome")]
-        private string name;
+        [Display(Name = "Nome")]
+        //[StringLength(32)]
+        //[Required(ErrorMessage = "Tem de colocar um nome")]
+        public string Name { get; set; }
 
         [Display(Name = "URL")]
-        private string url;
+        public string URL { get; set; }
 
         [Display(Name = "Informação")]
-        [StringLength(128)]
-        private string info;
+        //[StringLength(128)]
+        public string Info { get; set; }
 
         [Display(Name = "Latitude")]
-        [Required(ErrorMessage = "Obrigatório inserir latitude!")]
-        private double lat;
+        //[Required(ErrorMessage = "Obrigatório inserir latitude!")]
+        public double Latitude { get; set; }
 
         [Display(Name = "Longitude")]
-        [Required(ErrorMessage = "Obrigatório inserir longitude!")]
-        private double lng;
+        //[Required(ErrorMessage = "Obrigatório inserir longitude!")]
+        public double Longitude { get; set; }
 
         [Display(Name = "Data/hora de registo")]
         [DataType(DataType.DateTime)]
@@ -53,11 +53,11 @@ namespace TPWEB_Residual.Models
 
         public TiposEcoPontos Tipo { get; set; }
 
-        public string Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
-        public string URL { get => url; set => url = value; }
-        public double Lng { get => lng; set => lng = value; }
-        public double Lat { get => lat; set => lat = value; }
-        public string Info { get => info; set => info = value; }
+        //public string Id { get => id; set => id = value; }
+        //public string Name { get => name; set => name = value; }
+        //public string URL { get => url; set => url = value; }
+        //public double Longitude { get => longitude; set => longitude = value; }
+        //public double Latitude { get => latitude; set => latitude = value; }
+        //public string Info { get => info; set => info = value; }
     }
 }
