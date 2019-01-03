@@ -8,7 +8,7 @@
 Implementação de um sistema Web para gestão de resíduos que fornece um conjunto de serviços de recolha de materiais recicláveis do tipo papel/cartão, vidro/louça, óleos alimentares, pilhas, lâmpadas, material elétrico e eletrónico, pequenos objetos de metal, objetos em plástico e a recolha de materiais poluentes do género combustíveis pesados, pneus, baterias, tintas, solventes, óleos pesados, pesticidas e outros... Para estes últimos tipos de resíduos pretende-se criar um serviço de recolha direta, tendo em consideração que a recolha de determinados materiais recicláveis é uma tarefa difícil e perigosa, que exige a existência, ou a disponibilidade, de meios adequados ao transporte.
 
 ## Trabalho Prático de Programação WEB 2018/2019 - ISEC
-* Desenvolvido em Visual Studio Community Edition 2017;
+* Desenvolvido em Visual Studio Community Edition 2017 e Visual Studio Enterprise Edition 2017;
 * Com auxilio de: 
 	- [Entity Framework Power Tools Beta 4](https://marketplace.visualstudio.com/items?itemName=EntityFrameworkTeam.EntityFrameworkPowerToolsBeta4);
 	- [Entity Framework 6 Power Tools Community Edition](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EntityFramework6PowerToolsCommunityEdition);
@@ -27,7 +27,7 @@ Implementação de um sistema Web para gestão de resíduos que fornece um conju
 	- [x] TiposMateriais (enum)
 	- [x] Veículos;
 	- [x] TiposVeiculo (enum);
-	- [ ] EcoPontos;
+	- [x] EcoPontos;
 	- [x] TiposMateriaisReciclaveis (enum);
 	- [x] TipoMateriaisPoloentes (enum);
 	- [x] Markers( para os marcadorse do mapa);
